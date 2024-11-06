@@ -9,7 +9,7 @@ class StartWindow(QMainWindow):
     def __init__(self, game):
         super().__init__()
         self.game = game
-        uic.loadUi("mainWindow.ui", self)
+        uic.loadUi("PythonPackage\\mainWindow.ui", self)
         self.startButton.clicked.connect(self.start_game)
 
     def start_game(self):
@@ -19,7 +19,7 @@ class GuessWindow(QMainWindow):
     def __init__(self, game):
         super().__init__()
         self.game = game
-        uic.loadUi("guessWindow.ui", self)
+        uic.loadUi("PythonPackage\\guessWindow.ui", self)
         self.submitButton.clicked.connect(self.check_guess)
 
     def check_guess(self):
@@ -35,12 +35,12 @@ class GuessWindow(QMainWindow):
 class CongratsWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi("congratsWindow.ui", self)
+        uic.loadUi("PythonPackage\\congratsWindow.ui", self)
 
 class WrongWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi("wrongWindow.ui", self)
+        uic.loadUi("PythonPackage\\wrongWindow.ui", self)
 
 class Game:
     def __init__(self):
